@@ -58,6 +58,12 @@ const useStyles = makeStyles({
     left: '5px',
     color: '#FFFFFF',
     bgcolor: '#FFFFFF'
+  },
+  drawer: {
+    // paper: {
+      backgroundColor: "black",
+      // width: '100%'
+    // }
   }
 })
 
@@ -75,7 +81,7 @@ function App() {
         <ArrowForwardIos className={classes.hideIcon} /> 
       </IconButton>}
 
-      <Drawer className={classes.root} anchor={'left'} open={open} >
+      <Drawer classes={{ paper: classes.drawer }} anchor={'left'} open={open} >
 
           <Box className={classes.root} bgcolor="black">
             <IconButton onClick={() => setOpen(!open)}>
